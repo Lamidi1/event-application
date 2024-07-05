@@ -31,6 +31,7 @@ import Profile from './components/Profile';
 import User from './components/User';
 import Discovervenue from './components/Discovervenue';
 import Discovervenue2 from './components/Discovervenue2';
+import Myprofile from './components/Myprofile';
 
   import {BrowserRouter as Router,Routes,Route, BrowserRouter} from "react-router-dom"
 
@@ -72,6 +73,7 @@ function App() {
        <Route  path='/discovervenue'element={<Discovervenue/>}/>
         <Route  path='/discovervenue2'element={<Discovervenue2/>}/> 
        <Route  path='/home'element={<Home/>}/>
+       <Route  path='/myprofile'element={<Myprofile/>}/>
        </Routes>
        </Router>     
     

@@ -19,6 +19,7 @@ const userSchema = mongoose.Schema({
     email:{
         type:String,
         required: [true,"please time is require"],
+        // unique:[true,"email has already being used"],
      },
 
     nationality:{
