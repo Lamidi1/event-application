@@ -3,7 +3,7 @@ import './App.css';
 import Admin from './components/Admin';
 import SignUp from './components/SignUp';
  import Navbar from './components/Navbar';
-import SignIn from './components/SignIn';
+import SignInuser from './components/SignInuser';
 import Home from './components/Home';
 import Venue from './components/Venue';
 import Venue2 from './components/Venue2';
@@ -32,6 +32,7 @@ import User from './components/User';
 import Discovervenue from './components/Discovervenue';
 import Discovervenue2 from './components/Discovervenue2';
 import Myprofile from './components/Myprofile';
+import Video from './components/Video';
 
   import {BrowserRouter as Router,Routes,Route, BrowserRouter} from "react-router-dom"
 
@@ -42,7 +43,7 @@ function App() {
        <Routes>
 
         <Route  path='/signup'element={<SignUp/>}/>
-        <Route  path='/signin'element={<SignIn/>}/>
+        <Route  path='/signinuser'element={<SignInuser/>}/>
        <Route  path='/admin'element={<Admin/>}/>
        <Route  path='/navbar'element={<Navbar/>}/>
 
@@ -74,6 +75,7 @@ function App() {
         <Route  path='/discovervenue2'element={<Discovervenue2/>}/> 
        <Route  path='/home'element={<Home/>}/>
        <Route  path='/myprofile'element={<Myprofile/>}/>
+       <Route  path='/video'element={<Video/>}/>
        </Routes>
        </Router>     
     

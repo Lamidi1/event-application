@@ -19,8 +19,6 @@ const handleInput = (e) =>{
     
   }
 
-  
-
 const handleSubmit = (e)=>{
   e.preventDefault();
    console.log(formData)

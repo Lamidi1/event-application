@@ -4,6 +4,8 @@ import { IoSearchOutline } from "react-icons/io5";
 import { useState, } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
+import Discovervenue2 from './Discovervenue2';
+import Upcoming2 from './Upcoming2';
 
 
 const Home = () => {
@@ -54,19 +56,14 @@ eventAll();
     ))
   }
 </div>
-
      <h1 className='font-bold mt-3'>Upcoming Event</h1>
 
-    
-
-
-    
-
-
-
-
+     <Upcoming2/>
+     <h1 className='font-bold mt-2'>Discover Venues</h1>
+     <Discovervenue2/>
+     
     </div>
-
+   
 
   )
 }
