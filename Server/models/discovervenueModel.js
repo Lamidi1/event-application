@@ -15,6 +15,7 @@ const discovervenueSchema = mongoose.Schema({
         required: [true, "please picture is require"],
       },
     
+      
     isCompleted:{
         type:Boolean
     },

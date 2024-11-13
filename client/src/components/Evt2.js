@@ -45,7 +45,7 @@ const Evt2 = () => {
   {
     evt.map((evt)=>(
 <div key={evt._id}>
-  <img className='w-full h-28 mt-5' src={evt.image}/>  
+  <img className='w-full h-28 mt-5'  alt =''src={evt.image}/>  
 </div>
     ))
   }

@@ -9,20 +9,24 @@ import image6 from '../image/Rectangle6.png'
 import image7 from '../image/Rectangle7.png'
 import image8 from '../image/Rectangle8.png'
 import { Link } from 'react-router-dom'
+// import Navbar from './Navbar'
 
 const Services = () => {
-
+  
   return (
-    <div className='p-6 justify-item'>
+    <>
+
+  
+    <div className='p-6 justify-item '>
 
 <div className='flex flex-col'>
       < h1 className='font-semibold flex'> 
      <IoLocationSharp className='text-red-500 mt-1 w-5 h-5'/>
      N0 6, Trench Avenue,Pluto
      </h1>
-     </div>
+     </div >
 
- <div className='grid grid-cols-2'>
+ <div className='grid grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-3 '>
  <Link to='/Entertainment'> <img className='mt-5 ' alt='' src={image1}></img></Link>
  <Link to='/venue2'> <img className='mt-5' alt='' src={image2}></img></Link>
 
@@ -37,6 +41,8 @@ const Services = () => {
 
 
     </div>
+
+</>
   )
 }
 

@@ -32,7 +32,7 @@ const All2 = () => {
   {
     all.map((all)=>(
 <div key={all._id}>
-  <img className='mt-5 w-60 h-60 ' src={all.picture}/>
+  <img className='mt-5 w-60 h-60 ' alt='' src={all.picture}/>
       
 </div>
     ))

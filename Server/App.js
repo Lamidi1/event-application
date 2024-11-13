@@ -17,6 +17,8 @@ const soundModel = require ("./models/soundModel");
 const evtModel = require ("./models/evtModel");
 const allModel = require ("./models/allModel");
 const discovervenueModel = require ("./models/discovervenueModel");
+const signinuserModel = require ("./models/SigninuserModel");
+
 const app = express();
 
 // middlewares
@@ -456,6 +458,70 @@ app.get(`/all/:id`,async(req,res)=>{
   res.send("<h2>you are welcome to all events</h2>");
  });
 
+  //  SIGNINMODEL.........................................
+  // routes
+// ADDING SIGNIN
+
+
+app.post("/signinuser", async(req, res) => {
+  // var {email, password} = req.body;
+  // if (!email || !password) {
+  //   res.status(404);
+  //   throw new Error("All fields are Mandatory!");
+  // }
+  // try {
+  //   const signinuser = await signinuserModel.create(req.body);
+  //   res.status(200).json(signinuser);
+  // } catch (error) {
+  //   res.status(500).json({ error: error.message });
+  // }
+
+  console.log("posted");
+  const {password} =req.body;
+  const hashedpassword = await bcrypt.hash(password,10)
+  try {
+    const signinuser = await signinuserModel.create({
+      ...req.body,
+      password:hashedpassword,
+    });
+    // .......
+    res.status(200).json(signinuser);
+    console.log(signinuser);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+  //  console.log(req.body)
+});
+
+// // GET ALL SIGNIN
+app.get("/signinusers",async(req,res)=>{
+  try{
+  const signinusers = await signinuserModel.find()
+  res.status(200).json(signinusers)
+//  console.log(signins)
+  } catch(error){
+      res.status(500).json({error:error.message})
+  }
+})
+
+// GET A SINGLE SIGNIN
+app.get(`/signinuser/:id`,async(req,res)=>{
+  const {id} = req.params
+  try{
+      const signinuser = await signinuserModel.findById(id)
+      res.status(200).json(signinuser)
+
+  } catch (error){
+      res.status(500).json({error:error.message})
+  }
+}) 
+
+ app.get("/",(req,res) =>{
+  res.send("<h2>you are welcome to signinuser events</h2>");
+ });
+
+
+
 
 
 
@@ -463,7 +529,14 @@ app.get(`/all/:id`,async(req,res)=>{
   //  USER MODEL.............................................................
   // ADDING USER
   app.post("/user", async (req, res) => {
-    // .......
+// ....
+// var {name,username,gender,nationality,email,dateofBirth, password} = req.body;
+// if (!name|| !username|| !gender|| !nationality|| !dateofBirth|| !email || !password) {
+//   res.status(404);
+//   throw new Error("All fields are Mandatory!");
+// }
+
+    // .......Hashed password
     console.log("posted");
     const {password} =req.body;
     const hashedpassword = await bcrypt.hash(password,10)

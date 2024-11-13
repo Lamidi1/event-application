@@ -1,9 +1,10 @@
-
+import { useState,useEffect } from 'react';
 import './App.css';
+
 import Admin from './components/Admin';
 import SignUp from './components/SignUp';
  import Navbar from './components/Navbar';
-import SignIn from './components/SignIn';
+import SignInuser from './components/SignInuser';
 import Home from './components/Home';
 import Venue from './components/Venue';
 import Venue2 from './components/Venue2';
@@ -32,17 +33,30 @@ import User from './components/User';
 import Discovervenue from './components/Discovervenue';
 import Discovervenue2 from './components/Discovervenue2';
 import Myprofile from './components/Myprofile';
-
+import Video from './components/Video';
+// import Loading from '/components/Loading';
   import {BrowserRouter as Router,Routes,Route, BrowserRouter} from "react-router-dom"
 
-function App() {
+ function App() {
+//   const [isLoading, setIsLoading] = useState(true)
+//   useEffect(() => {
+//     setTimeout(()=>{
+//      setIsLoading(false);
+//     },5000)
+ 
+//  },)
+
+  
+   
+
+
   return (
     <div >
        <Router>
        <Routes>
 
         <Route  path='/signup'element={<SignUp/>}/>
-        <Route  path='/signin'element={<SignIn/>}/>
+        <Route  path='/signinuser'element={<SignInuser/>}/>
        <Route  path='/admin'element={<Admin/>}/>
        <Route  path='/navbar'element={<Navbar/>}/>
 
@@ -74,17 +88,19 @@ function App() {
         <Route  path='/discovervenue2'element={<Discovervenue2/>}/> 
        <Route  path='/home'element={<Home/>}/>
        <Route  path='/myprofile'element={<Myprofile/>}/>
+       <Route  path='/video'element={<Video/>}/>
        </Routes>
        </Router>     
     
- 
-     {/* <Admin/>
-     <Signup/>
-      <Nav/>   */}
-       
+{/*  
+       {isLoading===true?
+        <Loading/>:
+        <Home/>
+       } */}
+     
     </div>
 
-  );
-}
+ );
+ }
 
 export default App;
