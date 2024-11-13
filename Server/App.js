@@ -536,7 +536,7 @@ app.get(`/signinuser/:id`,async(req,res)=>{
 //   throw new Error("All fields are Mandatory!");
 // }
 
-    // .......Hashe password
+    // .......Hashed password
     console.log("posted");
     const {password} =req.body;
     const hashedpassword = await bcrypt.hash(password,10)

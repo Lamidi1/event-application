@@ -1,5 +1,6 @@
-
+import { useState,useEffect } from 'react';
 import './App.css';
+
 import Admin from './components/Admin';
 import SignUp from './components/SignUp';
  import Navbar from './components/Navbar';
@@ -33,10 +34,22 @@ import Discovervenue from './components/Discovervenue';
 import Discovervenue2 from './components/Discovervenue2';
 import Myprofile from './components/Myprofile';
 import Video from './components/Video';
-
+// import Loading from '/components/Loading';
   import {BrowserRouter as Router,Routes,Route, BrowserRouter} from "react-router-dom"
 
-function App() {
+ function App() {
+//   const [isLoading, setIsLoading] = useState(true)
+//   useEffect(() => {
+//     setTimeout(()=>{
+//      setIsLoading(false);
+//     },5000)
+ 
+//  },)
+
+  
+   
+
+
   return (
     <div >
        <Router>
@@ -79,14 +92,15 @@ function App() {
        </Routes>
        </Router>     
     
- 
-     {/* <Admin/>
-     <Signup/>
-      <Nav/>   */}
-       
+{/*  
+       {isLoading===true?
+        <Loading/>:
+        <Home/>
+       } */}
+     
     </div>
 
-  );
-}
+ );
+ }
 
 export default App;

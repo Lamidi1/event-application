@@ -33,6 +33,7 @@ const Mc = () => {
     };
 
   return (
+    
     <div className='p-6'>Mc
      <form className='flex flex-col gap-5'onSubmit={handleSubmit}>
      <input type='text'

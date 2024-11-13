@@ -9,7 +9,7 @@ const Myprofile = () => {
   }
   return (
     <div className='p-6'>
-     <h1 className=' font-semibold pl-7'>
+     <h1 className=' font-semibold pl-7 '>
        <Link to='/profile'> <FaArrowLeft  className='absolute left-4 mt-1'/></Link>
            My profile</h1>
      

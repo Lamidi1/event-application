@@ -6,7 +6,11 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import Discovervenue2 from './Discovervenue2';
 import Upcoming2 from './Upcoming2';
+import Navbar from './Navbar';
 
+// import { Link } from 'react-router-dom';
+// import { GoHomeFill } from "react-icons/go";
+// ............
 
 const Home = () => {
 
@@ -30,6 +34,10 @@ eventAll();
 
 
   return (
+    <>
+    
+    <Navbar/>
+
     <div className='p-6'>
       
     <div className='flex flex-col'>
@@ -40,9 +48,9 @@ eventAll();
      </div>
      
      <div className='relative flex items-center mt-2 w-full '>
-        <IoSearchOutline className='absolute left-4 text-slate-500'/>
+        <IoSearchOutline className='absolute left-4 text-slate-500 mt-1'/>
         <input type='text' placeholder='Search' name='Search' className='outline-none pl-10 w-full h-12 
-        border-2 rounded-2xl border-slate-400 '/>
+        border-2 rounded-2xl border-slate-400 gap-4'/>
         </div> 
 
         <h1 className='font-bold mt-6'>Happennig Now!!!</h1>
@@ -57,14 +65,16 @@ eventAll();
   }
 </div>
      <h1 className='font-bold mt-3'>Upcoming Event</h1>
-
-     <Upcoming2/>
+        
+     <Upcoming2 className=''/>
+    
      <h1 className='font-bold mt-2'>Discover Venues</h1>
      <Discovervenue2/>
      
+    
+  
     </div>
-   
-
+    </>
   )
 }
 

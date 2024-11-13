@@ -60,10 +60,10 @@ const SignInuser = () => {
           value={formData.password} onChange={handleInput} name='password' />
         </div>
 
-        <Link to='/video'>
+        {/* <Link to='/video'> */}
       <button  className='p-2 w-full border-slate-400  text-white border-2 
         bg-blue-600  rounded-md'>Log in</button>
-           </Link>
+           {/* </Link> */}
            
           <div className='relative flex items-center'>
           <FcGoogle className='absolute left-96'/>
